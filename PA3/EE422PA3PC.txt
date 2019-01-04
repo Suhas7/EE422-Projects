@@ -1,0 +1,57 @@
+PSEUDOCODE FOR EE422 PROJECT 3
+
+visited=hashset()
+stack=initStack()
+DFSfunc(start, end):
+	if(start==end){print end, return}
+	for each permutation of start:
+		if it's visited, skip it
+		if it doesn't exist in the dictionary, move on
+		if both of these are false:
+			push permutation
+			if(func(permutation, end)):
+				return True
+			else:
+				pop permutation
+	return False
+
+def BFSfunc(start, end):
+	globalqueue=initQueue()
+	2dArray=init2dArray
+	curr=start
+	i=0
+	while(curr!=end & queue.notempty)
+		noneLeft=True
+		for each permutation x in curr:
+			j=0
+			if it is an unvisited word:
+				noneLeft=False
+				add x to global queue
+				add x to col i of array
+				j++
+		if noneLeft:
+			break out and return none
+		i+=1
+		curr=queue.pop
+	#POSTPROCESSING
+	#need to find a path through the history stored in the array
+	while(curr!=start && i>0):
+		tmpQueue.push(curr)
+		for k in range(i):
+			for k2 in range(j):
+				if(adjacent(table[k][k2],curr):
+					curr=table[k][k2]
+					i=k
+					break
+
+def BFSpp(arr, start, end, i):
+	if(i==-1){print end}
+	j=0
+	lastEdge=arr[i][j]
+	for j in range(len(arr[i])):
+		if entry is adjacent to end:
+			lastEdge=entry
+			break
+	BFSpp(arr,start,lastEdge,i-1)
+	print(lastEdge)
+	return None
